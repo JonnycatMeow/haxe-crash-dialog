@@ -88,7 +88,7 @@ class Main
 
 				mainView.findComponent("restart-button", Button).onClick = function(_)
 				{  
-					//what ever name your mod is!!!!
+					//whatever name your mod is!!!!
 					#if windows
 					new Process("IzzyEngine.exe", []);
 					#elseif linux
