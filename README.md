@@ -1,4 +1,4 @@
-# Crash-Dialoge
+# Crash-Dialog
 Made by gedehari 
 # how to compile it and make it in your game 
 
