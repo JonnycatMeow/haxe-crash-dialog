@@ -47,7 +47,7 @@ class Main
 
 			app.ready(function()
 			{
-				var mainView:Component = haxe.ui.ComponentBuilder.fromFile("assets/main-view.xml");
+				var mainView:Component = haxe.ui.ComponentBuilder.fromFile("assets/crash-dialog-images/main-view.xml");
 				app.addComponent(mainView);
 
 				var messageLabel:Label = mainView.findComponent("message-label", Label);
@@ -87,11 +87,14 @@ class Main
 				};
 
 				mainView.findComponent("restart-button", Button).onClick = function(_)
-				{
+				{  
+					//what ever name your mod is!!!!
 					#if windows
 					new Process("IzzyEngine.exe", []);
-					#elseif (linux||mac)
-					new Process("./IzzyEngine", []);
+					#elseif linux
+					new Process("./IzzyEngine", []); 
+					#elseif mac
+					new Process("./IzzyEngine.app", []);
 					#end
 
 					Sys.exit(0);

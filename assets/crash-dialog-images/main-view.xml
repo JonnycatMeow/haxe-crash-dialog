@@ -1,6 +1,6 @@
 <vbox width="500">
     <!-- <box width="500" height="100" style="background-color: red; border:1px solid red; background-opacity: .5" /> -->
-    <image resource="assets/banner.png" />
+    <image resource="assets/crash-dialog-images/banner.png" />
     <vbox style="padding: 5px;" width="100%">
         <label id="message-label" text="Message" width="100%" textAlign="center" />
         <label text="Call stack:" />
