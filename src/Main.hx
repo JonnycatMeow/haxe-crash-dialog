@@ -76,11 +76,13 @@ class Main
 				}
 
 				mainView.findComponent("view-crash-dump-button", Button).onClick = function(_)
-				{
+				{   //thank you lime
 					#if windows
-					Sys.command("start", [path]);
+					Sys.command("start", ["",path]);
 					#elseif linux
-					Sys.command("xdg-open", [path]);
+					Sys.command("/usr/bin/xdg-open", [path]); 
+					#elseif mac  
+					Sys.command("/usr/bin/open", [path]);
 					#end
 				};
 
@@ -88,7 +90,7 @@ class Main
 				{
 					#if windows
 					new Process("IzzyEngine.exe", []);
-					#elseif linux
+					#elseif (linux||mac)
 					new Process("./IzzyEngine", []);
 					#end
 
