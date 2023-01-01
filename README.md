@@ -1,11 +1,5 @@
-# crash-handler-Forever-engine-feather-version
-made by Pluma Team 
+# crash handler dnb occ version
+made by dnb occ team
 
 # how to compile  
  to compile do lime build linux or windows or mac 
- 
- # haxelibs 
- 
- ```haxelib install haxeui-core```
- 
- ```haxelib install haxeui-openfl```
