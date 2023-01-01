@@ -27,8 +27,9 @@ class PlayState extends FlxState
 			+ ".txt\"!",
 			20);
 		text.setFormat("assets/comic.ttf", Math.round((36 / (Math.max(Math.min(Std.string(Sys.args()[0]).length - 350, 1) / 1.5, 1)))));
-		add(text);
-		FlxG.sound.playMusic("assets/game_crash_song.ogg", 1);
+		add(text); 
+		//if you want to add sound to da crash
+		//FlxG.sound.playMusic("assets/game_crash_song.ogg", 1);
 		super.create();
 	}
 
