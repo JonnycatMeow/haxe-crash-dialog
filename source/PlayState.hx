@@ -38,7 +38,11 @@ class PlayState extends FlxState
 			Sys.exit(0);
 		else if (FlxG.keys.justPressed.ENTER)
 			#if linux
-			Sys.command('/usr/bin/xdg-open', ["https://discord.gg/VNvmegFB9k"]);
+			Sys.command('/usr/bin/xdg-open', ["https://discord.gg/VNvmegFB9k"]); 
+		        #elseif mac
+			Sys.command('/usr/bin/open', ["https://discord.gg/VNvmegFB9k"]); 
+		        #elseif windows
+			Sys.command('start', ["https://discord.gg/VNvmegFB9k"]);
 			#else
 			FlxG.openURL("https://discord.gg/VNvmegFB9k");
 			#end
