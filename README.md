@@ -6,7 +6,8 @@ made by dnb occ team
  
  # how to add the crash handler 
  
- 1. add this code on Main.hx. 
+ 1. add this code on Main.hx.  
+ 
   ```static function onCrash(e:UncaughtErrorEvent):Void
 	{
 		var errMsg:String = "";
