@@ -8,7 +8,7 @@ made by dnb occ team
  
  1. add this code on Main.hx.  
  
-  ```static function onCrash(e:UncaughtErrorEvent):Void
+  static function onCrash(e:UncaughtErrorEvent):Void
 	{
 		var errMsg:String = "";
 		var callStack:Array<StackItem> = CallStack.exceptionStack(true);
@@ -33,5 +33,5 @@ made by dnb occ team
 
 		new Process(crashDialoguePath, [errMsg, e.error]);
 		Sys.exit(1);
-	}``` 
+	}
  
