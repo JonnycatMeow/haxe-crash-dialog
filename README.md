@@ -6,32 +6,6 @@ made by dnb occ team
  
  # how to add the crash handler 
  
- 1. add this code on Main.hx.  
- 
-  static function onCrash(e:UncaughtErrorEvent):Void
-	{
-		var errMsg:String = "";
-		var callStack:Array<StackItem> = CallStack.exceptionStack(true);
-
-		for (stackItem in callStack)
-		{
-			switch (stackItem)
-			{
-				case FilePos(s, file, line, column):
-					errMsg += file + " (line " + line + ")\n";
-				default:
-			}
-		}
-
-		errMsg += "\nUncaught Error: " + e.error + "\n";
-
-		var crashDialoguePath:String = "OccurrenceCrashHandler";
-
-		#if windows
-		crashDialoguePath += ".exe";
-		#end
-
-		new Process(crashDialoguePath, [errMsg, e.error]);
-		Sys.exit(1);
-	}
+ 1. add this code on Main.hx.  	https://github.com/RafPlayz69YT/public-dnb-occ/blob/064276e6bfa0c212c751a27320fa62cb6934ce80/source/Main.hx#L68 
+ 2. make sure give the path on the dialog path like for example ```assets/dialog/thing.app```
  
