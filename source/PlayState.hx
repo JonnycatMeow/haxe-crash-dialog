@@ -51,9 +51,15 @@ class PlayState extends FlxState
 		{
 			try
 			{
-				if (!FileSystem.exists(Sys.getCwd() + "crashlogs/"))
-					FileSystem.createDirectory(Sys.getCwd() + "crashlogs/");
+			   if (!FileSystem.exists(Sys.getCwd() + "crashlogs/")) 
+			   { 
+				
+				
+				FileSystem.createDirectory(Sys.getCwd() + "crashlogs/");
 				File.saveContent(Sys.getCwd() + "crashlogs/" + date + ".txt", Std.string(Sys.args()[0]));
+				
+			   }
+					
 			}
 			catch (e)
 			{
