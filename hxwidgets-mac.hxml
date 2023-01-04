@@ -6,7 +6,7 @@
 -lib hxWidgets
 -lib hscript
 
--D macos
+-D mac
 -D ABI=-MD
 -D WXSTATIC
 -D HXCPP_M64
