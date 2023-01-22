@@ -77,12 +77,15 @@ class Main
 					#if windows
 					Sys.command("start", [path]);
 					#elseif linux
-					Sys.command("xdg-open", [path]);
+					Sys.command("xdg-open", [path]); 
+					#elseif mac
+					Sys.command("open", [path]);
 					#end
 				};
 
 				mainView.findComponent("restart-button", Button).onClick = function(_)
-				{
+				{       
+					//the app name
 					#if windows
 					new Process("Forever Engine Feather", []);
 					#elseif linux
